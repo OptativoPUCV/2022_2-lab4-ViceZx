@@ -40,8 +40,8 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-  map->buckets[3]->key = 0;
-  map->buckets[3]->value = 0);
+  map->buckets[3]->key = key;
+  map->buckets[3]->value = value;
 }
 
 void enlarge(HashMap * map) {

@@ -694,3 +694,12 @@ Sat 10 Sep 2022 02:12:22 AM UTC:
  tests:  5|4
 total_score: 30/70
 6b52df0
+Sat 10 Sep 2022 02:15:33 AM UTC: 
+ hashmap.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c:91:1: error: expected identifier or ‘(’ before ‘}’ token
+   91 | }
+      | ^
+Compilation failed
+c7b6f17

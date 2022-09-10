@@ -495,3 +495,17 @@ hashmap.c:44:38: error: expected ‘;’ before ‘}’ token
       | ~                                     
 Compilation failed
 7c99428
+Sat 10 Sep 2022 01:51:04 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:3: error: too few arguments to function ‘strcmp’
+   44 |   strcmp (map->buckets[3]->value = 0);
+      |   ^~~~~~
+In file included from test.c:3:
+/nix/store/iwd8ic5hhwdxn5dga0im55g5hjl270cd-glibc-2.33-47-dev/include/string.h:140:12: note: declared here
+  140 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^~~~~~
+Compilation failed
+1f44b84

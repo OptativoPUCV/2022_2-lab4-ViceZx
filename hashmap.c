@@ -80,12 +80,10 @@ Pair * searchMap(HashMap * map,  char * key) {
     while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
         if (is_equal(key, map->buckets[index]->key) == 1){
             buscar = map->buckets[index];
+            map->current = index;
             return buscar;
         }
         index = (index+1)% map->capacity;
-    }
-    map->current = index;
-    return NULL;
 }
 
 Pair * firstMap(HashMap * map) {

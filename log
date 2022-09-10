@@ -249,3 +249,22 @@ Sat 10 Sep 2022 01:08:29 AM UTC:
  tests:  1|5
 total_score: 10/70
 258f665
+Sat 10 Sep 2022 01:19:26 AM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:23: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘value’
+   43 |   int index = hash(map->value);
+      |                       ^~
+hashmap.c:43:15: error: too few arguments to function ‘hash’
+   43 |   int index = hash(map->value);
+      |               ^~~~
+hashmap.c:26:6: note: declared here
+   26 | long hash( char * key, long capacity) {
+      |      ^~~~
+hashmap.c:44:16: error: incompatible types when assigning to type ‘HashMap’ {aka ‘struct HashMap’} from type ‘void *’
+   44 |   map[index] = value;
+      |                ^~~~~
+Compilation failed
+8610e5a

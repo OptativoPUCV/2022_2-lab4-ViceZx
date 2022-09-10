@@ -892,3 +892,32 @@ Sat 10 Sep 2022 02:34:45 AM UTC:
  tests:  11|2
 total_score: 50/70
 439b984
+Sat 10 Sep 2022 02:37:44 AM UTC: 
+ hashmap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:58:21: error: invalid initializer
+   58 |     Pair ogBuckets= map->buckets;
+      |                     ^~~
+hashmap.c:61:5: error: conversion to non-scalar type requested
+   61 |     map->buckets= (Pair)malloc(map->capacity* sizeof(Pair));
+      |     ^~~
+hashmap.c:63:5: error: conversion to non-scalar type requested
+   63 |     map->buckets[i]= (Pair)malloc(sizeof(Pair));
+      |     ^~~
+hashmap.c:68:18: error: subscripted value is neither array nor pointer nor vector
+   68 |     if (ogBuckets[i] != NULL) insertMap(map, ogBuckets[i]->key, ogBuckets[i]->value);
+      |                  ^
+hashmap.c:68:55: error: subscripted value is neither array nor pointer nor vector
+   68 |     if (ogBuckets[i] != NULL) insertMap(map, ogBuckets[i]->key, ogBuckets[i]->value);
+      |                                                       ^
+hashmap.c:68:74: error: subscripted value is neither array nor pointer nor vector
+   68 |     if (ogBuckets[i] != NULL) insertMap(map, ogBuckets[i]->key, ogBuckets[i]->value);
+      |                                                                          ^
+hashmap.c:58:10: error: variable ‘ogBuckets’ set but not used [-Werror=unused-but-set-variable]
+   58 |     Pair ogBuckets= map->buckets;
+      |          ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9158c3f

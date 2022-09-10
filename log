@@ -843,3 +843,20 @@ hashmap.c:72:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 32937e0
+Sat 10 Sep 2022 02:26:43 AM UTC: 
+ hashmap.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:83:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   83 |   return NULL;
+      |          ^~~~
+hashmap.c:72:6: note: declared here
+   72 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+hashmap.c:74:9: error: unused variable ‘buscar’ [-Werror=unused-variable]
+   74 |   Pair* buscar = NULL;
+      |         ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ba0b34e

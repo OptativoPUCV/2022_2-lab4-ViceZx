@@ -569,3 +569,14 @@ hashmap.c:43:12: error: variable ‘index’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 3cc535b
+Sat 10 Sep 2022 01:59:59 AM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:27: error: statement with no effect [-Werror=unused-value]
+   47 |       map->buckets[index] == value;
+      |       ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2631976

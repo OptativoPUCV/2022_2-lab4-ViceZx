@@ -399,3 +399,9 @@ hashmap.c:43:7: error: unused variable ‘index’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c8d0b83
+Sat 10 Sep 2022 01:32:48 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+e2998f1

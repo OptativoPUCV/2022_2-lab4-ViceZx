@@ -287,3 +287,28 @@ hashmap.c:44:16: error: incompatible types when assigning to type ‘HashMap’ 
       |                ^~~~~
 Compilation failed
 da691c2
+Sat 10 Sep 2022 01:20:05 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:20: error: passing argument 1 of ‘hash’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   43 |   int index = hash(map);
+      |                    ^~~
+      |                    |
+      |                    HashMap * {aka struct HashMap *}
+hashmap.c:26:19: note: expected ‘char *’ but argument is of type ‘HashMap *’ {aka ‘struct HashMap *’}
+   26 | long hash( char * key, long capacity) {
+      |            ~~~~~~~^~~
+hashmap.c:43:15: error: too few arguments to function ‘hash’
+   43 |   int index = hash(map);
+      |               ^~~~
+hashmap.c:26:6: note: declared here
+   26 | long hash( char * key, long capacity) {
+      |      ^~~~
+hashmap.c:44:16: error: incompatible types when assigning to type ‘HashMap’ {aka ‘struct HashMap’} from type ‘void *’
+   44 |   map[index] = value;
+      |                ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8a3f56f

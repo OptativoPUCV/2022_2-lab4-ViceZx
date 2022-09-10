@@ -52,12 +52,15 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-Map * new = (Map *)malloc(sizeof(Map));
-    assert(new != NULL); // No hay memoria para reservar la Mapa.
-    new->head = new->tail = new->current = NULL;
-    new->is_equal = is_equal;
-    new->lower_than = NULL;
-    return new;
+  Map * new = (Map *)malloc(sizeof(Map));
+  assert(new != NULL); // No hay memoria para reservar la Mapa.
+  new->is_equal = is_equal;
+  map->buckets = (Pair **) calloc (10,sizeof(Pair *));
+  map->capacity = 10;
+  return new;
+  HashMap * map = (HashMap *)malloc(sizeof(HashMap));
+    map->buckets = (Pair **) calloc (10,sizeof(Pair *));
+    map->capacity = 10;
 }
 
 void eraseMap(HashMap * map,  char * key) {    

@@ -421,3 +421,14 @@ Sat 10 Sep 2022 01:34:41 AM UTC:
  1 file changed, 1 insertion(+), 2 deletions(-)
  tests:  0|0
 6598d8f
+Sat 10 Sep 2022 01:34:56 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:19: error: assignment to ‘Pair *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   44 |   map->buckets[3] = 1;
+      |                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+cfffd5f

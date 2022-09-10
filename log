@@ -312,3 +312,22 @@ hashmap.c:44:16: error: incompatible types when assigning to type ‘HashMap’ 
 cc1: all warnings being treated as errors
 Compilation failed
 8a3f56f
+Sat 10 Sep 2022 01:26:13 AM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:24: error: passing argument 2 of ‘hash’ makes integer from pointer without a cast [-Werror=int-conversion]
+   43 |   int index = hash(key,value);
+      |                        ^~~~~
+      |                        |
+      |                        void *
+hashmap.c:26:29: note: expected ‘long int’ but argument is of type ‘void *’
+   26 | long hash( char * key, long capacity) {
+      |                        ~~~~~^~~~~~~~
+hashmap.c:43:7: error: unused variable ‘index’ [-Werror=unused-variable]
+   43 |   int index = hash(key,value);
+      |       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1dcbe32

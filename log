@@ -382,3 +382,9 @@ hashmap.c:42:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 95df570
+Sat 10 Sep 2022 01:32:23 AM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/70
+e266fdb

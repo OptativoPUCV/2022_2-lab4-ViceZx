@@ -405,3 +405,14 @@ Sat 10 Sep 2022 01:32:48 AM UTC:
  tests:  1|5
 total_score: 10/70
 e2998f1
+Sat 10 Sep 2022 01:33:19 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:3: error: ‘bucket’ undeclared (first use in this function)
+   44 |   bucket[3] = value;
+      |   ^~~~~~
+hashmap.c:44:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2addfa3

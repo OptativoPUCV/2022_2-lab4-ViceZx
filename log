@@ -388,3 +388,14 @@ Sat 10 Sep 2022 01:32:23 AM UTC:
  tests:  1|5
 total_score: 10/70
 e266fdb
+Sat 10 Sep 2022 01:32:41 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:7: error: unused variable ‘index’ [-Werror=unused-variable]
+   43 |   int index = hash(key,3);
+      |       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c8d0b83

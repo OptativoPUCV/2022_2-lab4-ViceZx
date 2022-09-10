@@ -653,3 +653,22 @@ hashmap.c:26:19: note: expected ‘char *’ but argument is of type ‘long int
 cc1: all warnings being treated as errors
 Compilation failed
 a4b055c
+Sat 10 Sep 2022 02:11:05 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:43: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Werror=int-conversion]
+   47 |                     long index= hash(index+1,map->capacity);
+      |                                      ~~~~~^~
+      |                                           |
+      |                                           long int
+hashmap.c:26:19: note: expected ‘char *’ but argument is of type ‘long int’
+   26 | long hash( char * key, long capacity) {
+      |            ~~~~~~~^~~
+hashmap.c:47:43: error: ‘index’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   47 |                     long index= hash(index+1,map->capacity);
+      |                                      ~~~~~^~
+cc1: all warnings being treated as errors
+Compilation failed
+e5fc31e

@@ -44,11 +44,13 @@ void insertMap(HashMap * map, char * key, void * value) {
 
     while (map->buckets[index] != NULL && map->buckets[index]->key != NULL){
         if (is_equal(key, map->buckets[index]->key) == 1) return; 
-                    index= (index+1)% map->capacity;
+                    index= hash(index+1,map->capacity);
     }
-      map->buckets[index]->key= key;
-      map->buckets[index]->value= value;
-    map->buckets[index] = createPair(key, value);
+    if (map->buckets[index] != NULL){
+        map->buckets[index]->key= key;
+        map->buckets[index]->value= value;
+    }
+    else map->buckets[index] = createPair(key, value);
     map->size+=1;
 }
 

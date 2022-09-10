@@ -96,3 +96,37 @@ hashmap.c:60:10: error: returning ‘int *’ from a function with incompatible 
 cc1: all warnings being treated as errors
 Compilation failed
 213a818
+Sat 10 Sep 2022 12:54:18 AM UTC: 
+ hashmap.c | 3 ---
+ 1 file changed, 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:3: error: unknown type name ‘Map’
+   55 |   Map * new = (Map *)malloc(sizeof(Map));
+      |   ^~~
+hashmap.c:55:16: error: ‘Map’ undeclared (first use in this function)
+   55 |   Map * new = (Map *)malloc(sizeof(Map));
+      |                ^~~
+hashmap.c:55:16: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:21: error: expected expression before ‘)’ token
+   55 |   Map * new = (Map *)malloc(sizeof(Map));
+      |                     ^
+hashmap.c:56:3: error: implicit declaration of function ‘assert’ [-Werror=implicit-function-declaration]
+   56 |   assert(new != NULL); // No hay memoria para reservar la Mapa.
+      |   ^~~~~~
+hashmap.c:7:1: note: ‘assert’ is defined in header ‘<assert.h>’; did you forget to ‘#include <assert.h>’?
+    6 | #include "hashmap.h"
+  +++ |+#include <assert.h>
+    7 | 
+hashmap.c:57:6: error: request for member ‘is_equal’ in something not a structure or union
+   57 |   new->is_equal = is_equal;
+      |      ^~
+hashmap.c:58:3: error: ‘map’ undeclared (first use in this function)
+   58 |   map->buckets = (Pair **) calloc (10,sizeof(Pair *));
+      |   ^~~
+hashmap.c:60:10: error: returning ‘int *’ from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   60 |   return new;
+      |          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+5fc5b22

@@ -545,3 +545,27 @@ hashmap.c:44:15: error: array subscript is not an integer
 cc1: all warnings being treated as errors
 Compilation failed
 f7a1bb6
+Sat 10 Sep 2022 01:57:06 AM UTC: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:13: error: too few arguments to function ‘hash’
+   45 |     index = hash()
+      |             ^~~~
+hashmap.c:26:6: note: declared here
+   26 | long hash( char * key, long capacity) {
+      |      ^~~~
+hashmap.c:45:19: error: expected ‘;’ before ‘}’ token
+   45 |     index = hash()
+      |                   ^
+      |                   ;
+......
+   48 |   }
+      |   ~                
+hashmap.c:43:12: error: variable ‘index’ set but not used [-Werror=unused-but-set-variable]
+   43 |   long int index;
+      |            ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3cc535b

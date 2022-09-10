@@ -331,3 +331,17 @@ hashmap.c:43:7: error: unused variable ‘index’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 1dcbe32
+Sat 10 Sep 2022 01:27:02 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:27: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘c’
+   43 |   int index = hash(key,map->c);
+      |                           ^~
+hashmap.c:43:7: error: unused variable ‘index’ [-Werror=unused-variable]
+   43 |   int index = hash(key,map->c);
+      |       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cb3d4e5

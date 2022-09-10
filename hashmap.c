@@ -55,8 +55,8 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
-  Pair **ogBuckets= map->buckets;
-  long ogCapacity= map->capacity;
+  Pair **Buckets_antiguo= map->buckets;
+  long capacidad_antigua= map->capacity;
   map->capacity *= 2;
   map->buckets= (Pair**)malloc(map->capacity* sizeof(Pair*));
   for (int i= 0; i< map->capacity; i++){
@@ -64,8 +64,8 @@ void enlarge(HashMap * map) {
     map->buckets[i]= NULL;
   }
   map->size= 0;
-  for (int i= 0; i< ogCapacity; i++){
-    if (ogBuckets[i] != NULL) insertMap(map, ogBuckets[i]->key, ogBuckets[i]->value);
+  for (int i= 0; i< capacidad_antigua; i++){
+    if (Buckets_antiguo[i] != NULL) insertMap(map, Buckets_antiguo[i]->key, Buckets_antiguo[i]->value);
   }
 
 

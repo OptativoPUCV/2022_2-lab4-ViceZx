@@ -345,3 +345,20 @@ hashmap.c:43:7: error: unused variable ‘index’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 cb3d4e5
+Sat 10 Sep 2022 01:31:08 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:14: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   43 | map->current = value;
+      |              ^
+hashmap.c:44:13: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   44 |   return map->current;
+      |          ~~~^~~~~~~~~
+hashmap.c:42:6: note: declared here
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+dd86d02

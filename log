@@ -509,3 +509,15 @@ In file included from test.c:3:
       |            ^~~~~~
 Compilation failed
 1f44b84
+Sat 10 Sep 2022 01:51:25 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:29: error: expected ‘;’ before ‘)’ token
+   44 |   map->buckets[3]->value = 0);
+      |                             ^
+      |                             ;
+hashmap.c:44:29: error: expected statement before ‘)’ token
+Compilation failed
+b7066e2

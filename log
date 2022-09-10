@@ -416,3 +416,8 @@ hashmap.c:44:3: error: ‘bucket’ undeclared (first use in this function)
 hashmap.c:44:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 2addfa3
+Sat 10 Sep 2022 01:34:41 AM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  0|0
+6598d8f

@@ -454,3 +454,14 @@ hashmap.c:43:19: error: assignment to ‘Pair *’ from ‘long int’ makes poi
 cc1: all warnings being treated as errors
 Compilation failed
 b1cc1c2
+Sat 10 Sep 2022 01:38:03 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:12: error: unused variable ‘index’ [-Werror=unused-variable]
+   43 |   long int index = hash(key,map->capacity);
+      |            ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2c5ce26

@@ -672,3 +672,9 @@ hashmap.c:47:43: error: ‘index’ may be used uninitialized in this function [
 cc1: all warnings being treated as errors
 Compilation failed
 e5fc31e
+Sat 10 Sep 2022 02:11:36 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+c95dda3
